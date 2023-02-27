@@ -10,7 +10,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
 * `USER`: They can watch the games, they can comment on games and watch his profile.
 * `NON-REGISTER-USER`: They just can watch the existing games.
 
-## Applications
+## Application
 
 - ### game-api
 
@@ -58,7 +58,8 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
   ```
 - Once the container is up enter to [`keycloak`](http://localhost:8080/admin/)
 
-  ## The application ports
+
+## The application ports
 
 | Application | ports      |
 |-------------|----------- |
@@ -67,7 +68,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
 | Keycloak    | 8080       |
 | MySQL       | 3306       |
 
-  ## Running game-app
+## Running game-app
 
 - **game-api**
 
