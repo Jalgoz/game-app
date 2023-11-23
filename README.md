@@ -61,7 +61,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
 - and there create the Realm: `world-game-app`  
 - in the Realm settings go to Login options and enable the User Registration switch  
 - then create Client: `game-app`  
-- config the Client: ![keycloak client configuration](https://drive.google.com/file/d/1BvOfDQxlfz0BmjNvXeD-1BTN6CUMYwPX/view?usp=drive_link)  
+- config the Client: ![keycloak client configuration](https://drive.google.com/uc?export=view&id=1BvOfDQxlfz0BmjNvXeD-1BTN6CUMYwPX)  
 - create the Client Roles: `ADMIN` and `USER`
 - finally in the Realm roles options set the default roles up with the USER role
 
