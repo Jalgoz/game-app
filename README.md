@@ -30,7 +30,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
   | `PUT /api/games`                                                  | Yes     | `ADMIN`                     | 
   | `DELETE /api/games`                                               | Yes     | `ADMIN`                     | 
   | `GET /api/users`                                                  | Yes     | `ADMIN` and `USER`          |
-  | `POST /api/games/*/comments                                       | Yes     | `ADMIN` and `USER`          |
+  | `POST /api/games/*/comments`                                       | Yes     | `ADMIN` and `USER`          |
 
 - ### game-ui
 
@@ -57,6 +57,13 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
   docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin --name keycloak quay.io/keycloak/keycloak:21.0.0 start-dev
   ```
 - Once the container is up enter to [`keycloak`](http://localhost:8080/admin/)
+  
+- and there create the Realm: `world-game-app`  
+- in the Realm settings go to Login options and enable the User Registration switch  
+- then create Client: `game-app`  
+- config the Client: ![keycloak client configuration](https://drive.google.com/file/d/1BvOfDQxlfz0BmjNvXeD-1BTN6CUMYwPX/view?usp=drive_link)  
+- create the Client Roles: `ADMIN` and `USER`
+- finally in the Realm roles options set the default roles up with the USER role
 
 
 ## The application ports
@@ -73,14 +80,6 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
 - **game-api**
 
   - Run the SpringSecurityApplication.java
-
-    Once the startup finishes, `KeycloakInitializerRunner.java` class will run and initialize `world-game` realm in `Keycloak`. Basically, it will create:
-    - Realm: `world-game`
-    - Client: `game-app`
-    - Client Roles: `ADMIN` and `USER`
-    - Two users
-      - `admin`: with roles `ADMIN` and `USER`
-      - `user`: only with role `USER`
 
 - **game-ui**
 
