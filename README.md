@@ -54,7 +54,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
 
 - To run docker type this command in a terminal
   ```
-  docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:21.0.0 start-dev
+  docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin --name keycloak quay.io/keycloak/keycloak:21.0.0 start-dev
   ```
 - Once the container is up enter to [`keycloak`](http://localhost:8080/admin/)
 
