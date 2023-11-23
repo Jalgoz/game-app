@@ -14,12 +14,10 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 public class GetGameByIdService implements GetGameByIdUseCase {
-
   private final FindGameByIdPort findGameByIdPort;
 
   @Override
   public GameDto findGameById(UUID id) {
     return Mapper.convert(findGameByIdPort.getGameById(id), GameDto.class);
   }
-
 }

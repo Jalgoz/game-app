@@ -4,7 +4,5 @@ import com.jalgoz.springsecurity.user.domain.User;
 
 @FunctionalInterface
 public interface FindUserPort {
-
   User findUser(String username);
-
 }

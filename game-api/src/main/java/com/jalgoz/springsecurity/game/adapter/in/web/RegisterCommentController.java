@@ -19,7 +19,6 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class RegisterCommentController {
-
   private final RegisterCommentUseCase registerCommentUseCase;
 
   @PostMapping(Path.COMMENTS_ID)
@@ -29,5 +28,4 @@ public class RegisterCommentController {
       Principal principal) {
     return ResponseEntity.status(HttpStatus.CREATED).body(registerCommentUseCase.registerComment(commentCommand, id, principal));
   }
-
 }

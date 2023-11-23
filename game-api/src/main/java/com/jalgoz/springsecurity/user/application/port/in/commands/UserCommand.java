@@ -16,7 +16,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class UserCommand {
-
   private UUID id;
   private String name;
   @NotNull @NotBlank private String username;
@@ -25,5 +24,4 @@ public class UserCommand {
   private String role;
   private LocalDateTime createdDate;
   private Set<AuthorityCommand> authorities;
-
 }

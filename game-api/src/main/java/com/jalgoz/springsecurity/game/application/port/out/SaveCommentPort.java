@@ -6,7 +6,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface SaveCommentPort {
-
   Comment saveComment(Comment comment, UUID id);
-
 }

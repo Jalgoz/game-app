@@ -38,7 +38,7 @@ The goal of this project is to secure `game-app` using [`Keycloak`](https://www.
   
   `game-ui` uses [`Semantic UI React`](https://react.semantic-ui.com/) as CSS-styled framework.
 
-  ## Prerequisites
+## Prerequisites
 
 - [`Java 17+`](https://www.oracle.com/java/technologies/downloads/#java17)
 - [`XAMPP`](https://www.apachefriends.org/es/download.html)

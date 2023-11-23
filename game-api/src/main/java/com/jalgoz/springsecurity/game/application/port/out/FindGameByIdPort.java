@@ -6,7 +6,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface FindGameByIdPort {
-
   Game getGameById(UUID id);
-
 }

@@ -6,7 +6,5 @@ import java.security.Principal;
 
 @FunctionalInterface
 public interface RegisterUserUseCase {
-
   UserCommand registerUser(Principal principal);
-
 }

@@ -6,7 +6,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface GetGameByIdUseCase {
-
   GameDto findGameById(UUID id);
-
 }

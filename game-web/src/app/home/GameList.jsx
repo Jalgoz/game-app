@@ -27,7 +27,7 @@ export const GameList = ({ games }) => {
         textAlign="center"
         as="h4"
       >
-        No movies
+        No games
       </Header>
     </Segment>
   );

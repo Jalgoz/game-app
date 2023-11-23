@@ -16,7 +16,6 @@ import org.springframework.validation.annotation.Validated;
 @Transactional
 @RequiredArgsConstructor
 public class RegisterGameService implements RegisterGameUseCase {
-
   private final SaveGamePort saveGamePort;
 
   @Override
@@ -24,5 +23,4 @@ public class RegisterGameService implements RegisterGameUseCase {
     final Game game = saveGamePort.saveGame(Mapper.convert(gameCommand, Game.class));
     return Mapper.convert(game, GameCommand.class);
   }
-
 }

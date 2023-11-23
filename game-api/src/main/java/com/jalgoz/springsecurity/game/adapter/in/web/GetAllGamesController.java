@@ -13,12 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class GetAllGamesController {
-
   private final GetAllGamesQuery getAllGamesQuery;
 
   @GetMapping(Path.GAME)
   public ResponseEntity<Iterable<GameDto>> getAllGames() {
     return ResponseEntity.ok(getAllGamesQuery.getAllGames());
   }
-
 }

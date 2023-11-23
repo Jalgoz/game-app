@@ -13,7 +13,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class User {
-
   private UUID id;
   private String name;
   private String username;
@@ -22,5 +21,4 @@ public class User {
   private String role;
   private LocalDateTime createdDate;
   private Set<Authority> authorities;
-
 }

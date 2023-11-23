@@ -13,8 +13,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class AuthorityCommand {
-
   private UUID id;
   @NotNull @NotBlank private String name;
-
 }

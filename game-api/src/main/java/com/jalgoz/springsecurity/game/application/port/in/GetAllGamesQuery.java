@@ -6,7 +6,5 @@ import java.util.List;
 
 @FunctionalInterface
 public interface GetAllGamesQuery {
-
   List<GameDto> getAllGames();
-
 }

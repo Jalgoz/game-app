@@ -3,8 +3,7 @@ package com.jalgoz.springsecurity.game.adapter.out.persistence.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
 import java.util.UUID;
@@ -18,17 +17,8 @@ import java.util.UUID;
 @Table(name = "games")
 @EqualsAndHashCode(of = {"id", "name"})
 public class GameJpaEntity {
-
   @Id
-  @GeneratedValue(generator = "UUID")
-  @GenericGenerator(
-      name = "UUID",
-      strategy = "org.hibernate.id.UUIDGenerator",
-      parameters = {
-          @Parameter(
-              name = "uuid_gen_strategy_class",
-              value = "org.hibernate.id.uuid.CustomVersionOneStrategy")
-      })
+  @UuidGenerator
   private UUID id;
   private String name;
   private String developer;
@@ -40,5 +30,4 @@ public class GameJpaEntity {
   @OneToMany(mappedBy = "game", cascade = CascadeType.REMOVE, orphanRemoval = true)
   @JsonIgnore
   private List<CommentJpaEntity> commentList;
-
 }

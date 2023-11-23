@@ -15,7 +15,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-
   private final JwtAuthConverter jwtAuthConverter;
 
   @Bean
@@ -33,5 +32,4 @@ public class SecurityConfig {
     http.cors().and().csrf().disable();
     return http.build();
   }
-
 }

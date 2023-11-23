@@ -6,7 +6,5 @@ import java.security.Principal;
 
 @FunctionalInterface
 public interface GetUserUseCase {
-
   UserDto getUser(Principal principal);
-
 }

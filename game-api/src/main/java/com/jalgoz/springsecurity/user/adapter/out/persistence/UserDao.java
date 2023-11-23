@@ -15,7 +15,6 @@ import java.util.Optional;
 @PersistenceAdapter
 @RequiredArgsConstructor
 public class UserDao implements SaveUserPort, FindUserPort {
-
   private final SpringDataUserRepository userRepository;
 
   @Override

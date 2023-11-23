@@ -18,12 +18,10 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class EditGameController {
-
   private final EditGameUseCase editGameUseCase;
 
   @PutMapping(Path.GAME_ID)
   public ResponseEntity<GameCommand> editGame(@RequestBody GameCommand gameCommand, @PathVariable UUID id) {
     return ResponseEntity.status(HttpStatus.OK).body(editGameUseCase.editGame(gameCommand, id));
   }
-
 }

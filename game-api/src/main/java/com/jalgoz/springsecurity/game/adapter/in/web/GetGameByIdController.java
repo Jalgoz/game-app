@@ -16,12 +16,10 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class GetGameByIdController {
-
   private final GetGameByIdUseCase getGameByIdUseCase;
 
   @GetMapping(Path.GAME_ID)
   public ResponseEntity<GameDto> getGameById(@PathVariable UUID id) {
     return ResponseEntity.ok(getGameByIdUseCase.findGameById(id));
   }
-
 }

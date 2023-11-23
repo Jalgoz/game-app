@@ -6,7 +6,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface UpdateGamePort {
-
   Game updateGame(Game game, UUID id);
-
 }

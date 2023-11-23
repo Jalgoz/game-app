@@ -7,7 +7,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface EditGameUseCase {
-
   GameCommand editGame(@Valid GameCommand gameCommand, UUID id);
-
 }

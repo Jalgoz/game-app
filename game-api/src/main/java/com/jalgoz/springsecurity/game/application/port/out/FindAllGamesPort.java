@@ -5,7 +5,5 @@ import com.jalgoz.springsecurity.game.domain.Game;
 import java.util.List;
 
 public interface FindAllGamesPort {
-
   List<Game> findAllGames();
-
 }

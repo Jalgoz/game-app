@@ -15,7 +15,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class UserDto {
-
   private UUID id;
   private String name;
   private String username;
@@ -24,5 +23,4 @@ public class UserDto {
   private String role;
   private LocalDateTime createdDate;
   private Set<Authority> authorities;
-
 }

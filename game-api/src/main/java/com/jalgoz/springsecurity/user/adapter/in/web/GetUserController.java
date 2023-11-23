@@ -15,12 +15,10 @@ import java.security.Principal;
 @RestController
 @RequiredArgsConstructor
 public class GetUserController {
-
   private final GetUserUseCase getUserUseCase;
 
   @GetMapping(Path.USER)
   public ResponseEntity<UserDto> getAllCustomers(Principal principal) {
     return ResponseEntity.ok(getUserUseCase.getUser(principal));
   }
-
 }

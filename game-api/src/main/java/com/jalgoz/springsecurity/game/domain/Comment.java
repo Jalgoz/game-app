@@ -12,10 +12,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id"})
 public class Comment {
-
   private UUID id;
   private String username;
   private String comment;
   private LocalDateTime timestamp;
-
 }

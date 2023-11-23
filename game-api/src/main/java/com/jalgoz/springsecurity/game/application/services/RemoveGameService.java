@@ -12,12 +12,10 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 public class RemoveGameService implements RemoveGameUseGame {
-
   private final DeleteGamePort deleteGamePort;
 
   @Override
   public void removeGame(UUID id) {
     deleteGamePort.deleteGame(id);
   }
-
 }

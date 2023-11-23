@@ -4,7 +4,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface DeleteGamePort {
-
   void deleteGame(UUID id);
-
 }

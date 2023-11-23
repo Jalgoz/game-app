@@ -16,12 +16,10 @@ import java.security.Principal;
 @RestController
 @RequiredArgsConstructor
 public class RegisterUserController {
-
   private final RegisterUserUseCase registerUserUseCase;
 
   @PostMapping(Path.USER)
   public ResponseEntity<UserCommand> registerUser(Principal principal) {
     return ResponseEntity.status(HttpStatus.CREATED).body(registerUserUseCase.registerUser(principal));
   }
-
 }

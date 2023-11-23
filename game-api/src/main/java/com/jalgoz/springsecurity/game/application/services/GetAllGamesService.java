@@ -14,12 +14,10 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class GetAllGamesService implements GetAllGamesQuery {
-
   private final FindAllGamesPort findAllGamesPort;
 
   @Override
   public List<GameDto> getAllGames() {
     return Mapper.convertAll(findAllGamesPort.findAllGames(), GameDto.class);
   }
-
 }

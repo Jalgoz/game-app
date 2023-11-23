@@ -14,12 +14,10 @@ import java.security.Principal;
 @Transactional
 @RequiredArgsConstructor
 public class GetUserService implements GetUserUseCase {
-
   private final FindUserPort findUserPort;
 
   @Override
   public UserDto getUser(Principal principal) {
     return Mapper.convert(findUserPort.findUser(principal.getName()), UserDto.class);
   }
-
 }

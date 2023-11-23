@@ -4,7 +4,6 @@ import com.jalgoz.springsecurity.common.WebAdapter;
 import com.jalgoz.springsecurity.common.utils.Path;
 import com.jalgoz.springsecurity.game.application.port.in.RemoveGameUseGame;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +16,6 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class RemoveGameController {
-
   private final RemoveGameUseGame removeGameUseGame;
 
   @DeleteMapping(Path.GAME_ID)
@@ -25,5 +23,4 @@ public class RemoveGameController {
     removeGameUseGame.removeGame(id);
     return new ResponseEntity<>(HttpStatus.ACCEPTED);
   }
-
 }

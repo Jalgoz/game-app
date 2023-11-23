@@ -5,7 +5,5 @@ import jakarta.validation.Valid;
 
 @FunctionalInterface
 public interface RegisterGameUseCase {
-
   GameCommand registerGame(@Valid GameCommand gameCommand);
-
 }

@@ -19,7 +19,6 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 public class RegisterCommentService implements RegisterCommentUseCase {
-
   private final SaveCommentPort saveCommentPort;
 
   @Override
@@ -29,5 +28,4 @@ public class RegisterCommentService implements RegisterCommentUseCase {
     Comment comment = saveCommentPort.saveComment(Mapper.convert(commentCommand, Comment.class), id);
     return Mapper.convert(comment, CommentCommand.class);
   }
-
 }

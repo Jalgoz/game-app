@@ -24,8 +24,8 @@ public class GameDao implements
     UpdateGamePort,
     DeleteGamePort,
     FindAllGamesPort ,
-    FindGameByIdPort{
-
+    FindGameByIdPort
+{
   private final String ERROR_ID = "Game with ID %s not found";
 
   private final SpringDataGameRepository gameRepository;

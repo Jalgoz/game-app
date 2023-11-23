@@ -1,15 +1,19 @@
-import { config, ROLE_ADMIN } from "./Constants";
+import { config, ROLE_ADMIN } from './Constants';
 
 export const bearerAuth = (token) => {
   return `Bearer ${token}`;
 };
 
 export const isAdmin = (keycloak) => {
-  return keycloak && 
-         keycloak.tokenParsed && 
-         keycloak.tokenParsed.resource_access[config.clientId] && 
-         keycloak.tokenParsed.resource_access[config.clientId].roles.includes(ROLE_ADMIN)
-}
+  return (
+    keycloak &&
+    keycloak.tokenParsed &&
+    keycloak.tokenParsed.resource_access[config.clientId] &&
+    keycloak.tokenParsed.resource_access[config.clientId].roles.includes(
+      ROLE_ADMIN,
+    )
+  );
+};
 
 export const handleLogError = (error) => {
   if (error.response) {
@@ -19,4 +23,4 @@ export const handleLogError = (error) => {
   } else {
     console.log(error.message);
   }
-}
+};

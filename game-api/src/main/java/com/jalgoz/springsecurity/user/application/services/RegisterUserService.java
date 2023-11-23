@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
 @Transactional
 @RequiredArgsConstructor
 public class RegisterUserService implements RegisterUserUseCase {
-
   private final SaveUserPort saveUserPort;
 
   @Override
@@ -30,5 +29,4 @@ public class RegisterUserService implements RegisterUserUseCase {
         .build();
     return Mapper.convert(saveUserPort.saveUser(user), UserCommand.class);
   }
-
 }

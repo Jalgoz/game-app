@@ -12,7 +12,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class GameDto {
-
   private UUID id;
   private String name;
   private String developer;
@@ -22,5 +21,4 @@ public class GameDto {
   private String poster;
   private short year;
   private List<CommentDto> commentList;
-
 }

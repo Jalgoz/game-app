@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class RegisterGameController {
-
   private final RegisterGameUseCase registerGameUseCase;
 
   @PostMapping(Path.GAME)
@@ -23,5 +22,4 @@ public class RegisterGameController {
     return ResponseEntity.status(HttpStatus.CREATED)
         .body(registerGameUseCase.registerGame(gameCommand));
   }
-
 }

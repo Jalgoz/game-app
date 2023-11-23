@@ -16,7 +16,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class GameCommand {
-
   private UUID id;
   @NotNull @NotBlank private String name;
   @NotNull @NotBlank private String developer;
@@ -25,5 +24,4 @@ public class GameCommand {
   private String classification;
   @NotNull @NotBlank private String poster;
   @NotNull private int year;
-
 }

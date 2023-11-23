@@ -17,7 +17,6 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 public class EditGameService implements EditGameUseCase {
-
   private final UpdateGamePort updateGamePort;
 
   @Override

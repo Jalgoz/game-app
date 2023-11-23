@@ -11,8 +11,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 public class Authority {
-
   private UUID id;
   private String name;
-
 }

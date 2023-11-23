@@ -4,7 +4,5 @@ import com.jalgoz.springsecurity.game.domain.Game;
 
 @FunctionalInterface
 public interface SaveGamePort {
-
   Game saveGame(Game game);
-
 }

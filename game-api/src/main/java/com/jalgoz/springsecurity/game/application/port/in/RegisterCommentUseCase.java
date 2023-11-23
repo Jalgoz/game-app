@@ -8,7 +8,5 @@ import java.util.UUID;
 
 @FunctionalInterface
 public interface RegisterCommentUseCase {
-
   CommentCommand registerComment(@Valid CommentCommand commentCommand, UUID id, Principal principal);
-
 }
